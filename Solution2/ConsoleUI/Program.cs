@@ -12,47 +12,53 @@ namespace ConsoleUI
         {
             CarManager carManager = new CarManager(new EfCarDal());
 
-            
-
-            
-            carManager.Add(new Car
+            foreach (var car in carManager.GetCarsDetail())
             {
-                Id = 7,
-                BrandId = 2,
-                ColorId = 2,
-                ModelYear = 2020,
-                DailyPrice = 400,
-                Description = "Renault, 2021 Model"
-            });
-
-            carManager.Update(new Car
-            {
-                Id = 7,
-                BrandId = 3,
-                ColorId = 3,
-                ModelYear = 2021,
-                DailyPrice = 500,
-                Description = "Ford, 2021 Model"
-            });
-
-            Console.WriteLine("---------------------------------");
-            foreach (var cars in carManager.GetAll())
-            {
-                Console.WriteLine(cars.Description + "\n");
-            }
-
-            Console.WriteLine("-----------------------------------");
-
-            foreach (var car in carManager.GetByBrandId(3))
-            {
-                Console.WriteLine(car.Description + " : " + car.BrandId + "\n");
-            }
-            Console.WriteLine( "--------------------------------------");
-            foreach (var car in carManager.GetByUnityPrice(20,800))
-            {
-                Console.WriteLine(car.Description + " : " + car.BrandId + "\n");
+                Console.WriteLine( car.BrandName+"/"+car.ColorName+"/"+car.Description+"/"+car.DailyPrice ) ;
+                
             }
 
         }
+
+        //private static void Car(CarManager carManager)
+        //{
+        //    carManager.Add(new Car
+        //    {
+        //        Id = 7,
+        //        BrandId = 2,
+        //        ColorId = 2,
+        //        ModelYear = 2020,
+        //        DailyPrice = 400,
+        //        Description = "Renault, 2021 Model"
+        //    });
+
+        //    carManager.Update(new Car
+        //    {
+        //        Id = 7,
+        //        BrandId = 3,
+        //        ColorId = 3,
+        //        ModelYear = 2021,
+        //        DailyPrice = 500,
+        //        Description = "Ford, 2021 Model"
+        //    });
+
+        //    Console.WriteLine("---------------------------------");
+        //    foreach (var cars in carManager.GetAll())
+        //    {
+        //        Console.WriteLine(cars.Description + "\n");
+        //    }
+
+        //    Console.WriteLine("-----------------------------------");
+
+        //    foreach (var car in carManager.GetByBrandId(3))
+        //    {
+        //        Console.WriteLine(car.Description + " : " + car + "\n");
+        //    }
+        //    Console.WriteLine("--------------------------------------");
+        //    foreach (var car in carManager.GetByUnityPrice(20, 800))
+        //    {
+        //        Console.WriteLine(car.Description + " : " + car.BrandId + "\n");
+        //    }
+        //}
     }
 }

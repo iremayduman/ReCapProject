@@ -13,3 +13,5 @@ C:\Users\umit\source\repos\Solution2\Business\obj\Debug\netcoreapp3.1\Business.c
 C:\Users\umit\source\repos\Solution2\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
 C:\Users\umit\source\repos\Solution2\Business\obj\Debug\netcoreapp3.1\Business.dll
 C:\Users\umit\source\repos\Solution2\Business\obj\Debug\netcoreapp3.1\Business.pdb
+C:\Users\umit\source\repos\Solution2\Business\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\umit\source\repos\Solution2\Business\bin\Debug\netcoreapp3.1\Core.pdb
