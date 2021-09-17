@@ -10,12 +10,33 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            CarManager carManager = new CarManager(new EfCarDal());
-
-            foreach (var car in carManager.GetCarsDetail())
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            //var result = rentalManager.Add(new Rental() { Id = 1, CarId = 3, CustomerId = 4, RentDate = DateTime.Now.Date, ReturnDate = null });
+            //if (result.Success == true)
+            //{
+            //    Console.WriteLine(result.Message);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result.Message);
+            //}
+            //var result1 = rentalManager.Add(new Rental() { Id = 6, CarId = 9, CustomerId = 4, RentDate = DateTime.Now.Date, ReturnDate = new DateTime(2021,9,16) });
+            //if (result1.Success == true)
+            //{
+            //    Console.WriteLine(result1.Message);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result1.Message);
+            //}
+            var result2 = rentalManager.Add(new Rental() { Id = 8, CarId = 9, CustomerId = 4, RentDate = DateTime.Now.Date, ReturnDate = null });
+            if (result2.Success == true)
             {
-                Console.WriteLine( car.BrandName+"/"+car.ColorName+"/"+car.Description+"/"+car.DailyPrice ) ;
-                
+                Console.WriteLine(result2.Message);
+            }
+            else
+            {
+                Console.WriteLine(result2.Message);
             }
 
         }
