@@ -20,15 +20,15 @@ namespace ConsoleUI
             //{
             //    Console.WriteLine(result.Message);
             //}
-            //var result1 = rentalManager.Add(new Rental() { Id = 6, CarId = 9, CustomerId = 4, RentDate = DateTime.Now.Date, ReturnDate = new DateTime(2021,9,16) });
-            //if (result1.Success == true)
-            //{
-            //    Console.WriteLine(result1.Message);
-            //}
-            //else
-            //{
-            //    Console.WriteLine(result1.Message);
-            //}
+            var result1 = rentalManager.Add(new Rental() { Id = 6, CarId = 9, CustomerId = 4, RentDate = DateTime.Now.Date, ReturnDate = new DateTime(2021,9,16) });
+            if (result1.Success == true)
+            {
+                Console.WriteLine(result1.Message);
+            }
+            else
+            {
+                Console.WriteLine(result1.Message);
+            }
             var result2 = rentalManager.Add(new Rental() { Id = 8, CarId = 9, CustomerId = 4, RentDate = DateTime.Now.Date, ReturnDate = null });
             if (result2.Success == true)
             {

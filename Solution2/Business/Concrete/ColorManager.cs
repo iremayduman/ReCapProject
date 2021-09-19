@@ -31,7 +31,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Deleted);
         }
 
-        public IDataResult<Color> GetBrandById(int colorId)
+        public IDataResult<Color> GetColorById(int colorId)
         {
             return new SuccessDataResult<Color>(_colorDal.GetBy(c => c.Id == colorId));
         }
