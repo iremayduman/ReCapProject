@@ -1,8 +1,16 @@
-﻿using Business.Abstract;
+﻿using Autofac;
+using Autofac.Extras.DynamicProxy;
+using Business.Abstract;
+using Business.Concrete;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Castle.DynamicProxy;
+using Core.Aspect.Autofac.Validation;
 using Core.IEntities;
+using Core.Interceptors;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
+using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Entities.DTOs;
 using System;
@@ -18,7 +26,7 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
-
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
             _carDal.Add(car);
