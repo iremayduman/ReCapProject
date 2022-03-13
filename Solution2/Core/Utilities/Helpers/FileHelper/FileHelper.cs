@@ -9,7 +9,7 @@ namespace Core.Utilities.Helpers
 {
     public class FileHelper : IFileHelper
     {
-        public string Upload(IFormFile file, string root) //Dosya yükleme metodu. Parametre dosya ve dosyanın kaydedileceği dizin
+        public string Add(IFormFile file, string root) //Dosya yükleme metodu. Parametre dosya ve dosyanın kaydedileceği dizin
         {
             if (file != null)
             {
@@ -43,7 +43,7 @@ namespace Core.Utilities.Helpers
             {
                 File.Delete(filePath);
             }
-            return Upload(file, root);
+            return Add(file, root);
         }
     }
 }
